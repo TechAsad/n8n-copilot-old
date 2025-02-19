@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "n8n Copilot",
+  "version": "1.0",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; connect-src 'self' https://n8n-5v15.onrender.com/"
+  },
+  "description": "AI assistant for n8n workflow building",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "sidePanel",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://n8n-5v15.onrender.com/*",
+    "<all_urls>"
+  ],
+  "side_panel": {
+    "default_path": "chat-ui.html"
+  },
+  "web_accessible_resources": [{
+    "resources": ["chat-ui.html"],
+    "matches": ["<all_urls>"]
+  }]
+}
